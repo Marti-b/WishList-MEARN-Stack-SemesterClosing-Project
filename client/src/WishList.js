@@ -8,9 +8,8 @@ function WishList(props){
             <ol>
             {data.map((item)=>{
                     return(
-                        <li key={item.id}>{item.text}</li>
+                        <li key={item.id}>{item.title}</li>
                     )
-               
             })}
             </ol>
             

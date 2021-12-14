@@ -9,16 +9,16 @@ const API_URL = process.env.REACT_APP_API;
 function App() {
   const [list, setData] = useState([
     { 
-      "id": 1,"text": "Apple iPhone 12 Pro"
+      "id": 1,"title": "Apple iPhone 12 Pro"
     },
     { 
-      "id": 2,"text": "ADATA HD650 - 2TB HDD"
+      "id": 2,"title": "ADATA HD650 - 2TB HDD"
     },
     { 
-      "id": 3,"text": "Philips OneBlade Face Razor"
+      "id": 3,"title": "Philips OneBlade Face Razor"
     },
     { 
-      "id": 3,"text": "The Rational Male - Preventive Medicine"
+      "id": 4,"title": "The Rational Male - Preventive Medicine"
     }
   ])
   // useEffect(() => {
@@ -30,7 +30,13 @@ function App() {
   //   }
   //   getData();
   // }, []);
-
+function addWish(title){
+  const newWish = {
+    id : list.length+1,
+    title : title
+  }
+  setData([...list, newWish])
+}
   return (
     <>
       <nav>
@@ -39,7 +45,7 @@ function App() {
     <Router>
       
       <WishList data={list} path="/">
-        <AddWish path="/"/>
+        <AddWish addWish ={addWish} path="/"/>
       </WishList>
 
       <Wish path="/wish/:id"/>

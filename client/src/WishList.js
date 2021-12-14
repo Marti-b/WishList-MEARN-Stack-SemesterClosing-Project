@@ -1,6 +1,7 @@
-function WishList(){
+function WishList(props){
     return(
         <>
+        {props.children}
         <h3> This is the main page like for the WishList</h3>
         </>
         

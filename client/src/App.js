@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import AddWish from "./AddWish";
+import Wish from "./Wish";
+import WishList from "./WishList";
+
 const API_URL = process.env.REACT_APP_API;
 
 function App() {
@@ -17,6 +21,9 @@ function App() {
   return (
     <>
       <h1>MERN App!</h1>
+      <AddWish/>
+      <Wish/>
+      <WishList/>
       <p>Data from server: {data}</p>
     </>
   );

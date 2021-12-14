@@ -1,8 +1,20 @@
 function WishList(props){
+    console.log("Wishlist Props: ", props )
+    let data = props.data
     return(
         <>
         {props.children}
-        <h3> This is the main page like for the WishList</h3>
+        
+            <ol>
+            {data.map((item)=>{
+                    return(
+                        <li key={item.id}>{item.text}</li>
+                    )
+               
+            })}
+            </ol>
+            
+        
         </>
         
     )

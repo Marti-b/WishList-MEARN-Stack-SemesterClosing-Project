@@ -7,17 +7,29 @@ import {Link, Router} from "@reach/router";
 const API_URL = process.env.REACT_APP_API;
 
 function App() {
-  const [data, setData] = useState("No data :(");
-
-  useEffect(() => {
-    async function getData() {
-      const url = `${API_URL}/hello`;
-      const response = await fetch(url);
-      const data = await response.json();
-      setData(data.msg);
+  const [list, setData] = useState([
+    { 
+      "id": 1,"text": "Apple iPhone 12 Pro"
+    },
+    { 
+      "id": 2,"text": "ADATA HD650 - 2TB HDD"
+    },
+    { 
+      "id": 3,"text": "Philips OneBlade Face Razor"
+    },
+    { 
+      "id": 3,"text": "The Rational Male - Preventive Medicine"
     }
-    getData();
-  }, []);
+  ])
+  // useEffect(() => {
+  //   async function getData() {
+  //     const url = `${API_URL}/hello`;
+  //     const response = await fetch(url);
+  //     const data = await response.json();
+  //     setData(data.msg);
+  //   }
+  //   getData();
+  // }, []);
 
   return (
     <>
@@ -26,7 +38,7 @@ function App() {
       </nav>
     <Router>
       
-      <WishList path="/">
+      <WishList data={list} path="/">
         <AddWish path="/"/>
       </WishList>
 

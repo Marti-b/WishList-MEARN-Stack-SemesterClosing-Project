@@ -1,8 +1,16 @@
-function Wish(){
+function Wish(props){
+    console.log(props)
+    const singleWish = props.getWish(props.id)
+    console.log(singleWish)
     return(
-        <>
-        <h3>Component of individual Wish</h3>
-        </>
+       
+        <div className="singleQuote">
+         
+         <p>{singleWish.title}</p>
+         <p></p>
+        <hr/>
+        </div>
+     
    
     )
 }

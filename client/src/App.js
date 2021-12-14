@@ -30,9 +30,13 @@ function App() {
   //   }
   //   getData();
   // }, []);
+  function getWish(id){
+    let wish = list.find(x => x.id.toString() === id)
+    return wish;
+  }
 function addWish(title){
   const newWish = {
-    id : list.length+1,
+    id : list.length + 1,
     title : title
   }
   setData([...list, newWish])
@@ -45,10 +49,10 @@ function addWish(title){
     <Router>
       
       <WishList data={list} path="/">
-        <AddWish addWish ={addWish} path="/"/>
+        <AddWish addWish={addWish} path="/"/>
       </WishList>
 
-      <Wish path="/wish/:id"/>
+      <Wish getWish={getWish} path="/wish/:id"/>
   
     </Router>
       

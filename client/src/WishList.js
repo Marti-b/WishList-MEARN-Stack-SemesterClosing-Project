@@ -1,3 +1,5 @@
+import { Link } from "@reach/router";
+
 function WishList(props){
     console.log("Wishlist Props: ", props )
     let data = props.data
@@ -5,13 +7,16 @@ function WishList(props){
         <>
         {props.children}
         
-            <ol>
+            
             {data.map((item)=>{
                     return(
-                        <li key={item.id}>{item.title}</li>
+                        <div className="wishlist" key={item.id}>
+                            <Link to={`/wish/${item.id}`}>{item.title}</Link>
+                        </div>
+                        
                     )
             })}
-            </ol>
+          
             
         
         </>

@@ -1,5 +1,5 @@
 function Wish(props){
-    console.log(props)
+    console.log("Wish props: ", props)
     const singleWish = props.getWish(props.id)
     console.log(singleWish)
     return(

@@ -5,8 +5,10 @@ const wishSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // comment : {}
-
+    comment : [{
+        username: {type: String, required: true},
+        content: {type: String, required: true}
+    }]
 });
 
 const Wish = mongoose.model("Wish", wishSchema);

@@ -28,6 +28,29 @@ function createRouter() {
       });
     }
   });
+
+  //Post comment
+  router.put("/wish/:id", async (req, res) => {
+    try {
+      const wish = await Wish.findOneAndUpdate( {_id: req.params.id},
+        {
+        $push: {
+          comment: req.body
+        }
+      },{
+        returnDocument: 'after'
+      }
+        );
+        res.status(201);
+        res.json(wish);
+      } catch (error) { 
+        res.status(500);  
+        res.json({
+          error: "Comment could not be created",
+          details: error.toString(),
+        });
+      }
+  });
   return router;
 }
 

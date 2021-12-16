@@ -7,17 +7,28 @@ function WishList(props){
         <>
         {props.children}
             {
+                
                 data.length === 0 ? (<p>Loading...</p>) :
                 (
+                <>
+                    
+             
                     <div className="wishlist">
+                    <h2>My wish list:</h2>
+                    <ol>
                         {data.map((item)=>{
                             return(
-                             <div  key={item._id}>
-                                    <Link  to={`/wish/${item._id}`}>{item.title}</Link>
+                             <div className="wishItem" key={item._id}>
+                                  <li><Link  to={`/wish/${item._id}`}>{item.title}</Link></li>  
                                 </div>
                             )
                         })}
+                        </ol>
                     </div>
+                
+                  
+                </>
+                   
                    
                 )
             }

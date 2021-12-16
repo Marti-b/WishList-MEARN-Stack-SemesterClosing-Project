@@ -1,3 +1,6 @@
+ body{
+     padding: 30px;
+ }
  .wishlist{
     margin-top: 40px;
     max-width: 400px;
@@ -14,7 +17,7 @@
   padding: 20px;
   box-shadow: rgba(36, 35, 39, 0.4) -1px 7px 10px;
 }
-button {
+.add-wish button {
     margin-left: 20px;
     color: var(--color-beige);
     padding: 4px 5px;
@@ -23,6 +26,42 @@ button {
   label{
       text-size-adjust: 10px;
   }
-  input{
+  #title{
     padding: 4px 5px;
   }
+
+   /* Add comment --------------------------------------------- */
+
+  .add-comment{
+    margin-top: 40px;
+    max-width: 400px;
+    background-color: var(--color-near-white);
+    border: 1px solid var(--color-beige);
+    padding: 20px;
+    box-shadow: rgba(82, 40, 207, 0.4) -1px 7px 10px;
+    
+  } 
+  #username{
+      margin-left: 20px;
+  }
+  #content{
+    margin-left: 5px;
+  }
+  .add-comment button{
+    margin-left: 100px;
+    color: var(--color-beige);
+    padding: 4px 5px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  .userName{
+    padding: 10px;
+  }
+
+  .comment{
+    margin-top: 40px;
+    padding: 20px;
+  }
+ .wishItem{
+    margin-top: 15px;
+ }

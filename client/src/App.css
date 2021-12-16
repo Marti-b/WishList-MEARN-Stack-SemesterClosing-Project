@@ -1,0 +1,28 @@
+ .wishlist{
+    margin-top: 40px;
+    max-width: 400px;
+    /* background-color: var(--color-near-white);
+    border: 1px solid var(--color-beige); */
+    padding: 20px;
+    
+} 
+.add-wish{
+    margin-top: 40px;
+  max-width: 400px;
+  background-color: var(--color-near-white);
+  border: 1px solid var(--color-beige);
+  padding: 20px;
+  box-shadow: rgba(36, 35, 39, 0.4) -1px 7px 10px;
+}
+button {
+    margin-left: 20px;
+    color: var(--color-beige);
+    padding: 4px 5px;
+    border-radius: 4px;
+  }
+  label{
+      text-size-adjust: 10px;
+  }
+  input{
+    padding: 4px 5px;
+  }

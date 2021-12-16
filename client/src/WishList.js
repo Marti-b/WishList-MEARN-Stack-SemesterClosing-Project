@@ -9,10 +9,10 @@ function WishList(props){
             {
                 data.length === 0 ? (<p>Loading...</p>) :
                 (
-                    <div>
+                    <div className="wishlist">
                         {data.map((item)=>{
                             return(
-                             <div className="wishlist" key={item._id}>
+                             <div  key={item._id}>
                                     <Link  to={`/wish/${item._id}`}>{item.title}</Link>
                                 </div>
                             )

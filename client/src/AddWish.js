@@ -8,7 +8,7 @@ function AddWish(props){
     return(
         <div className="add-wish">
          <h2>Add to the Wish List</h2>
-            <div>
+            <div >
             <label htmlFor="title">Wish item: </label>
             <input
             name="title"
@@ -16,14 +16,15 @@ function AddWish(props){
             onChange={(event => setWish(event.target.value))}
             type="title"
             />
-            </div>
-            <button 
+             <button 
             type="submit"
             onClick= {(event =>{
                 addWish(text)
             })}>
                 Add me!
             </button>
+            </div>
+           
         </div>
     )
 }

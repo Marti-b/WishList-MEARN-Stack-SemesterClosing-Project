@@ -3,6 +3,7 @@ import AddWish from "./AddWish";
 import Wish from "./Wish";
 import WishList from "./WishList";
 import {Link, Router} from "@reach/router";
+import './App.css';
 
 const API_URL = process.env.REACT_APP_API;
 

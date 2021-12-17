@@ -16,6 +16,7 @@ const wishSchema = new mongoose.Schema(
     },
     commentCount: {
       type: Number,
+      default: 0,
     },
     comment: [
       {

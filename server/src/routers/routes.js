@@ -9,7 +9,7 @@ function createRouter() {
 
   /* Define all routes */
   router.get("/", async (req, res) => {
-    const wishes = await Wish.find();
+    const wishes = await Wish.find().sort('-createdAt');
     res.json( wishes );
   });
 

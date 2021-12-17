@@ -76,7 +76,8 @@ function addWish(title, dsc, link){
 function addComment(id, name, comment){
   const newComment = {
     username: name,
-    content: comment
+    content: comment,
+    
   };
   fetch(`${API_URL}/wish/${id}`, {
     method: 'PUT',

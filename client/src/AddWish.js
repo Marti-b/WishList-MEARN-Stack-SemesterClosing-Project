@@ -14,6 +14,7 @@ function AddWish(props){
             <label htmlFor="title">Wish name: </label>
             <input
             name="title"
+            className="inTitle"
             id="title"
             onChange={(event => setTitle(event.target.value))}
             type="title"
@@ -23,6 +24,7 @@ function AddWish(props){
             <label htmlFor="title">Description: </label>
             <input
             name="title"
+            className="inputDsc"
             id="title"
             onChange={(event => setDescription(event.target.value))}
             type="title"

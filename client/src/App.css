@@ -74,7 +74,6 @@
   border: 1px solid var(--color-beige);
   padding: 20px;
   box-shadow: rgba(82, 40, 207, 0.4) -1px 7px 10px;
- 
  }
  .register button{
   margin-left: 50px;
@@ -84,5 +83,12 @@
   margin-top: 20px;
 }
 .wishItemBtn{
-  margin-left: 50px;
+  padding: 20px;
+  margin-left: 100px;
+}
+.inputDsc{
+  margin-left: 8px;
+}
+.inTitle{
+  margin-left: 11px;
 }

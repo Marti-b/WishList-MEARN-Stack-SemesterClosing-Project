@@ -13,6 +13,7 @@ function Login(props) {
     }
     function onCancel() {
       apiService.logout();
+      window.location.reload(false);
     }
   return (
     <>

@@ -18,7 +18,7 @@ class ApiService {
     });
     this.setToken(response.token);
   }
-
+  
   loggedIn() {
     // TODO: Check if token is expired using 'jwt-decode'
     // TODO: Install using 'npm install jwt-decode'

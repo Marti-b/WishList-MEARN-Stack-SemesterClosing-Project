@@ -15,6 +15,7 @@ function createServer() {
   const openPaths = [
     // Open "/api/users/authenticate" for POST requests
     { url: "/api/users/authenticate", methods: ["POST"] },
+    { url: "/api/users/", methods: ["POST"] },
     // Open everything that doesn't begin with "/api"
     // Open all GET requests on the form "/api/questions/*" using a regular expression
     { url: /\/api\.*/gim, methods: ["GET"] },

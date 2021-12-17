@@ -13,16 +13,6 @@ const API_URL = process.env.REACT_APP_API;
 function App() {
   const [list, setData] = useState([])
 
-  // useEffect(() => {
-  //   async function getData() {
-  //     const url = `${API_URL}/`;
-  //     const response = await fetch(url);
-  //     const data = await response.json();
-  //     console.log("Data getting from the server: ", data)
-  //     setData(data);
-  //   }
-  //   getData();
-  // }, []);
 
   async function getData() {
     // We now use `apiService.get()` instead of `fetch()`
@@ -87,7 +77,7 @@ function addComment(id, name, comment){
   const newComment = {
     username: name,
     content: comment
-  }
+  };
   fetch(`${API_URL}/wish/${id}`, {
     method: 'PUT',
     headers: {
@@ -104,7 +94,22 @@ function addComment(id, name, comment){
     setData(data);
   })
 }
+async function register(username, password){
+  const newUser = {
+    username: username,
+    password: password
+  };
+  fetch(`${API_URL}/users/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+  })
+  .then(response => response.json())
+  .then(alert("Registration is successful. Go to log in!"));
 
+}
 
   return (
     <>
@@ -124,7 +129,7 @@ function addComment(id, name, comment){
         <AddComment addComment={addComment} path="/"/>
       </Wish>
       <Login login={login} logut={logout} path="/login"/>
-      <Register path="/register"/>
+      <Register register={register} path="/register"/>
     </Router>
       
     </>

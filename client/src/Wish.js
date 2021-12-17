@@ -12,6 +12,7 @@ function Wish(props){
          <p>{singleWish.descriptions}</p>
          <h4>External link:</h4>
          <a href="singlewish.externalLink">{singleWish.externalLink}</a>
+         <p>It was created at: {singleWish.createdAt}</p>
          <hr/>
          {props.children}
 

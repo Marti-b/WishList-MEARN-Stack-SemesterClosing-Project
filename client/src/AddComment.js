@@ -28,7 +28,6 @@ function AddComment(props){
             />
             </div>
             <button 
-            className="addCBtn"
             type="submit"
             onClick= {(event =>{
                  props.addComment(props.id, name, content)

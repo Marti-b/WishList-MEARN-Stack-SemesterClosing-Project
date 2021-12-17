@@ -1,5 +1,7 @@
 import express from "express";
-import Wish from "./model/wish.js";
+import Wish from "../model/wish.js";
+
+
 
 function createRouter() {
   const router = express.Router();

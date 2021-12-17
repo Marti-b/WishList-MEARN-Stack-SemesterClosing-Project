@@ -57,7 +57,9 @@
   .userName{
     padding: 10px;
   }
-
+.password{
+  padding: 10px;
+}
   .comment{
     margin-top: 40px;
     padding: 20px;
@@ -65,3 +67,19 @@
  .wishItem{
     margin-top: 15px;
  }
+ .register{
+  margin-top: 40px;
+  max-width: 400px;
+  background-color: var(--color-near-white);
+  border: 1px solid var(--color-beige);
+  padding: 20px;
+  box-shadow: rgba(82, 40, 207, 0.4) -1px 7px 10px;
+ 
+ }
+ .register button{
+  margin-left: 50px;
+  color: var(--color-beige);
+  padding: 4px 5px;
+  border-radius: 4px;
+  margin-top: 20px;
+}

@@ -1,16 +1,26 @@
 /* Node.js libraries */
 import path from "path";
-
+import checkJwt from "express-jwt"; // Validates access tokens automatically
 /* External libraries */
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 
 /* Local files */
-import createRouter from "./routes.js";
+import createRouter from "./routers/routes.js";
+import  createUsersRouter  from "./routers/usersRouter.js";
 
 function createServer() {
   const app = express();
+  const openPaths = [
+    // Open "/api/users/authenticate" for POST requests
+    { url: "/api/users/authenticate", methods: ["POST"] },
+    // Open everything that doesn't begin with "/api"
+    // Open all GET requests on the form "/api/questions/*" using a regular expression
+    { url: /\/api\.*/gim, methods: ["GET"] },
+  ];
+  const secret = process.env.SECRET || "the cake is a lie";
+
 
   /* The express.json() middleware automatically parses JSON data in the body of
    * requests: http://expressjs.com/en/api.html#express.json */
@@ -42,6 +52,22 @@ function createServer() {
   app.get("*", (req, res) =>
     res.sendFile(path.resolve("..", "client", "build", "index.html"))
   );
+  app.use(
+  checkJwt({ secret, algorithms: ["HS512"] }).unless({ path: openPaths })
+);
+
+//This middleware checks the result of checkJwt above
+app.use((err, req, res, next) => {
+  if (err.name === "UnauthorizedError") {
+    // If the user didn't authorize correctly
+    res.status(401).json({ error: err.message }); // Return 401 with error message.
+  } else {
+    next(); // If no errors, forward request to next middleware or route handler
+  }
+});
+
+const usersRouter = createUsersRouter(secret);
+app.use("/api/users", usersRouter);
 
   return app;
 }

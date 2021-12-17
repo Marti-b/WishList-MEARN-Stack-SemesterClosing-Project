@@ -1,10 +1,12 @@
 import { Link } from "@reach/router";
+// import Login from "./Login";
 
 function WishList(props){
     console.log("Wishlist Props: ", props )
     let data = props.data
     return(
         <>
+             {/* <Login  path="/"/> */}
         {props.children}
             {
                 

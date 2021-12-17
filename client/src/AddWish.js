@@ -3,28 +3,52 @@ import { useState } from "react";
 function AddWish(props){
     const {addWish} = props;
 
-    const [text, setWish] = useState("");
+    const [title, setTitle] = useState("");
+    const [dsc, setDescription] = useState("");
+    const [link, setLink] = useState("");
 
     return(
         <div className="add-wish">
          <h2>Add to the Wish List</h2>
-            <div >
-            <label htmlFor="title">Wish item: </label>
+            <div className="wishItem">
+            <label htmlFor="title">Wish name: </label>
             <input
             name="title"
             id="title"
-            onChange={(event => setWish(event.target.value))}
+            onChange={(event => setTitle(event.target.value))}
             type="title"
             />
-             <button 
+            </div>
+            <div className="wishItem">
+            <label htmlFor="title">Description: </label>
+            <input
+            name="title"
+            id="title"
+            onChange={(event => setDescription(event.target.value))}
+            type="title"
+            />
+            
+            </div>
+            <div className="wishItem">
+            <label htmlFor="title">External link: </label>
+            <input
+            name="title"
+            id="title"
+            onChange={(event => setLink(event.target.value))}
+            type="title"
+            />
+            
+            </div>
+            <div className="wishItemBtn">
+            <button 
             type="submit"
             onClick= {(event =>{
-                addWish(text)
+                addWish(title, dsc, link);
             })}>
                 Add me!
             </button>
             </div>
-           
+            
         </div>
     )
 }

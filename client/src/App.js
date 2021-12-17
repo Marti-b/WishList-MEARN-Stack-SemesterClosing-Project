@@ -63,9 +63,11 @@ async function logout(username, password) {
     return wish;
   }
 
-function addWish(title){
+function addWish(title, dsc, link){
   const newWish = {
-    title : title
+    title : title,
+    descriptions : dsc,
+    externalLink: link
   }
   fetch(`${API_URL}/`, {
     method: 'POST',

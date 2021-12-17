@@ -5,9 +5,13 @@ function Wish(props){
     const comment = singleWish.comment;
     return(
        
-        <div className="singleQuote">
+        <div className="singleWish">
          
-         <p>I would like a(n): {singleWish.title}</p>
+         <h3> {singleWish.title}</h3>
+         <h4>Description:</h4>
+         <p>{singleWish.descriptions}</p>
+         <h4>External link:</h4>
+         <a href="singlewish.externalLink">{singleWish.externalLink}</a>
          <hr/>
          {props.children}
 

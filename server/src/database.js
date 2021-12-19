@@ -23,17 +23,20 @@ export async function seedDatabase(){
     console.log('Seeding database')
     const defaultWish = [
       { 
-        "title": "Apple iPhone 12 Pro", "descriptions:" : "A like-new experience. Backed by a one-year satisfaction guarantee.This Renewed Premium product is shipped and sold by Amazon and has been certified by Amazon to work and look like new. With at least 90% battery life, it comes in deluxe, Amazon-branded packaging and is backed by a one-year warranty and technical support.",
+        "title": "Apple iPhone 12 Pro", 
+        "descriptions" : "A like-new experience. Backed by a one-year satisfaction guarantee.This Renewed Premium product is shipped and sold by Amazon and has been certified by Amazon to work and look like new. With at least 90% battery life, it comes in deluxe, Amazon-branded packaging and is backed by a one-year warranty and technical support.",
         "externalLink": "https://www.amazon.com/Apple-iPhone-12-Pro-Max/dp/B09JFFG8D7/ref=sr_1_1?keywords=Apple+iPhone+12+Pro&qid=1639750535&sr=8-1"
       },
       { 
         
-        "title": "ADATA HD650 - 2TB HDD", "descriptions:" : "USB 3.1 Interface that works with PC, Mac, Linux Shock-Resistance, Scratch-resistance surface, AES 256 Encryption, 3 Year Warranty",
-        "externalLink:" :"https://www.amazon.com/ADATA-HD650-Shock-Resistant-External-AHD650-2TU31-CBK/dp/B07338G6GR/ref=sr_1_2?keywords=ADATA%2BHD650%2B-%2B2TB%2BHDD&qid=1639750299&sr=8-2&th=1#HLCXComparisonWidget_feature_div"
+        "title": "ADATA HD650 - 2TB HDD", 
+        "descriptions" : "USB 3.1 Interface that works with PC, Mac, Linux Shock-Resistance, Scratch-resistance surface, AES 256 Encryption, 3 Year Warranty",
+        "externalLink" :"https://www.amazon.com/ADATA-HD650-Shock-Resistant-External-AHD650-2TU31-CBK/dp/B07338G6GR/ref=sr_1_2?keywords=ADATA%2BHD650%2B-%2B2TB%2BHDD&qid=1639750299&sr=8-2&th=1#HLCXComparisonWidget_feature_div"
       },
       { 
         
-        "title": "Philips OneBlade Face Razor", "descriptions:" : "Philips Norelco OneBlade Face + Body is a revolutionary grooming technology designed for facial styling and body grooming. It can trim, edge and shave any length of hair.",
+        "title": "Philips OneBlade Face Razor", 
+        "descriptions" : "Philips Norelco OneBlade Face + Body is a revolutionary grooming technology designed for facial styling and body grooming. It can trim, edge and shave any length of hair.",
         "externalLink": "https://www.amazon.com/Philips-Norelco-OneBlade-QP2520-72/dp/B07C2S3DMV/ref=sr_1_1_sspa?keywords=Philips+OneBlade+Face+Razor&qid=1639750582&sr=8-1-spons&psc=1&smid=A6EGA15UEFYEQ&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzS1kxRURBN1pNMUNLJmVuY3J5cHRlZElkPUEwNDU3OTQyMU5CUkZMMDNPMlVQVyZlbmNyeXB0ZWRBZElkPUExMDQ1NjAyQVZIRjlYNk4zM1A1JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
       },
       { 
@@ -43,7 +46,8 @@ export async function seedDatabase(){
       },
       { 
         
-        "title": "The One by Dolce & Gabbana Eau De Parfum", "descriptions:" : "Launched by the design house of Dolce Gabbana in the year 2015. This woody spicy fragrance has a blend of coriander, basil, grapefruit, ginger, orange blossom, cardamom, tobacco, sensual amber, and cedar notes.",
+        "title": "The One by Dolce & Gabbana Eau De Parfum", 
+        "descriptions" : "Launched by the design house of Dolce Gabbana in the year 2015. This woody spicy fragrance has a blend of coriander, basil, grapefruit, ginger, orange blossom, cardamom, tobacco, sensual amber, and cedar notes.",
         "externalLink": "https://www.amazon.com/DOLCE-GABBANA-One-Parfum-Spray/dp/B074L61FXT/ref=sr_1_5?crid=T27Y0N2MCNME&keywords=dolce+and+gabbana+the+one&qid=1639750706&sprefix=dolce%2Caps%2C244&sr=8-5"
       },
       { 
